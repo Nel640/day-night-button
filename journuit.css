@@ -1,0 +1,133 @@
+/*..............................................body................*/
+.bodynight{
+    background-color: rgb(58, 58, 58);
+}
+.bodysun{
+    background-color: white;
+}
+.night{
+    animation: sunbody 2s forwards;
+}
+@keyframes sunbody {
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: rgb(58, 58, 58);;
+    }
+}
+@keyframes nightbody {
+    from{
+        background-color: rgb(58, 58, 58);;
+    }
+    to{
+        background-color: white;
+    }
+}
+.sun{
+    animation: nightbody 2s backwards;
+}
+/*..............................................glisse................*/
+.glisse{
+    position: relative;
+    overflow: hidden;
+    border-radius: 100rem;
+    width: 4rem;
+    height: 1.49rem;
+}
+.glissesun{
+    background-image: url(images/nuit.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.glissenight{
+    background-image: url(images/jour.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.animnight{
+    animation: animnight 2s forwards;
+}
+.animsun{
+    animation: animsun 2s forwards;
+}
+@keyframes animsun {
+    from{
+        background-image: url(images/jour.jpg);
+    }
+    to{
+        background-image: url(images/nuit.jpg);
+    }
+}
+@keyframes animnight {
+    from{
+        background-image: url(images/nuit.jpg);
+    }
+    to{
+        background-image: url(images/jour.jpg);
+    }
+}
+/*..............................................btn glisse................*/
+
+.glissebtnsun{
+    position: absolute;
+    font-size: 3rem;
+    top: -20px;
+    right: -11px;
+    width: min-content;
+    overflow: visible;
+
+    &::before{
+        content: "\2601";
+        color: grey;
+    }
+}
+.glissebtnnight{
+    position: absolute;
+    font-size: 3rem;
+    top: -25px;
+    left: -13px;
+    width: min-content;
+    overflow: visible;
+
+    &::before{
+        content: "\2600";
+        color: yellow;
+    }
+}
+.animbtnnight{
+    animation: animnightbtn 2s forwards;
+}
+@keyframes animnightbtn {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+.animbtnsun{
+    animation: animsunbtn 2s forwards;
+}
+@keyframes animsunbtn {
+    from{
+        transform: translateX(+100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.cardsun{
+    margin-top: 20%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+.cardnight{
+    margin-top: 20%;
+    border: 4px solid rgb(187, 187, 187);
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(149, 149, 149);
+}
